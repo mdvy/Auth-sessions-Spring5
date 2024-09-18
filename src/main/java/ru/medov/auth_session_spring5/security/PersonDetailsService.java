@@ -21,4 +21,5 @@ public class PersonDetailsService implements UserDetailsService {
         return personService.getPersonByName(s).map(PersonDetails::new)
                 .orElseThrow(()-> new UsernameNotFoundException("user not found"));
     }
+
 }
